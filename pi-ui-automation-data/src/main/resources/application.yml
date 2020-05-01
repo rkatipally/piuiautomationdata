@@ -1,2 +1,16 @@
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/mapricingapp
+
+
 automation:
   users: atp3rxk
+  testDataMappingPath: classpath:mappings
+  apiDataMappingPath: classpath:data
+  testDataMappingCollection: testDataMapping
+  apiDataMappingCollection: apiDataMapping

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +26,7 @@ public class AutomationInterceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(final HttpServletRequest request, final HttpServletResponse response, final Object handler) throws Exception {
         if (automationService.isTestUser(request.getHeader(X_USER_ID))) {
+            HandlerMethod method = (HandlerMethod) handler;
             log.info("[preHandle][" + request + "]" + "[" + request.getMethod() + "]" + request.getRequestURI());
             UIServiceResponse<FareSearchStatus, String> modifiedResponse = new UIServiceResponse<>();
             modifiedResponse.setData(new FareSearchStatus());

@@ -1,58 +1,60 @@
-{
-  "name": "search",
-  "url": "/search",
-  "mappings": [
-    {
-      "id": "1",
-      "params": "",
-      "request": {
-        "yqyr": true,
-        "effectiveDate": "01MAY20",
-        "searchType": "BY_FARE",
-        "criteria": [
-          {
-            "origin": "WAS",
-            "destination": "CHA",
-            "market": "",
-            "carrier": "AA",
-            "accountCode": "",
-            "pdt": "PUB",
-            "footnote": "",
-            "fareClasses": "",
-            "passengerTypeCode": "",
-            "fareTypeCode": "",
-            "rbd": "",
-            "routing": "",
-            "seasonality": "",
-            "currency": "",
-            "minStay": "",
-            "advancedPurchase": "",
-            "seasonalityType": "",
-            "owrt": "",
-            "rule": "",
-            "itineraryTripType": "Both",
-            "marketAttributes": {}
-          }
-        ],
-        "userId": "ATP3RXK",
-        "hostCarrier": "AA"
-      },
-      "response": {
-        "data": {
-          "_id": null,
-          "searchType": null,
-          "status": null,
-          "domesticSubsTime": null,
-          "internationalSubsTime": null,
-          "totalFareCount": 0,
-          "totalRequestCount": 0,
-          "completedRequestCount": 0,
-          "errorCount": 0,
-          "hostCarrier": null,
-          "maxMarketLimitReached": false
+[
+  {
+    "name": "search",
+    "baseUrl": "/search",
+    "combinations": [
+      {
+        "id": "1",
+        "urlStr": "",
+        "request": {
+          "yqyr": true,
+          "effectiveDate": "01MAY20",
+          "searchType": "BY_FARE",
+          "criteria": [
+            {
+              "origin": "WAS",
+              "destination": "CHA",
+              "market": "",
+              "carrier": "AA",
+              "accountCode": "",
+              "pdt": "PUB",
+              "footnote": "",
+              "fareClasses": "",
+              "passengerTypeCode": "",
+              "fareTypeCode": "",
+              "rbd": "",
+              "routing": "",
+              "seasonality": "",
+              "currency": "",
+              "minStay": "",
+              "advancedPurchase": "",
+              "seasonalityType": "",
+              "owrt": "",
+              "rule": "",
+              "itineraryTripType": "Both",
+              "marketAttributes": {}
+            }
+          ],
+          "userId": "ATP3RXK",
+          "hostCarrier": "AA"
         },
-        "message": "new message"
+        "response": {
+          "data": {
+            "_id": null,
+            "searchType": null,
+            "status": null,
+            "domesticSubsTime": null,
+            "internationalSubsTime": null,
+            "totalFareCount": 0,
+            "totalRequestCount": 0,
+            "completedRequestCount": 0,
+            "errorCount": 0,
+            "hostCarrier": null,
+            "maxMarketLimitReached": false
+          },
+          "message": "new message"
+        }
       }
-    }
-  ]
-}
+    ]
+  }
+]
