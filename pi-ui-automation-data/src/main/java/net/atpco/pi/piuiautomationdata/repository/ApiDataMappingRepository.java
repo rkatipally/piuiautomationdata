@@ -11,4 +11,5 @@ public interface ApiDataMappingRepository {
     List<ApiDataMapping> findAll(Class<ApiDataMapping> entityClass, String collectionName);
     void dropCollection(String collectionName);
     ApiDataMapping findByUrlAndRequest(String url, JSONObject request, String collectionName);
+    ApiDataMapping findByUrl(String url, String collectionName);
 }

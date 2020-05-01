@@ -11,12 +11,12 @@
           "data": {
             "_id": "1",
             "searchType": "BY_FARE",
-            "status": "PROCESSING",
+            "status": "COMPLETED",
             "domesticSubsTime": null,
             "internationalSubsTime": null,
-            "totalFareCount": 0,
+            "totalFareCount": 3,
             "totalRequestCount": 2,
-            "completedRequestCount": 0,
+            "completedRequestCount": 2,
             "errorCount": 0,
             "hostCarrier": "AA",
             "maxMarketLimitReached": false

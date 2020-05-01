@@ -1,7 +1,7 @@
 [
   {
     "name": "search",
-    "baseUrl": "/atpapps/pistrategyskipper/api/v1/crud/page",
+    "baseUrl": "/atpapps/pistrategyskipper/api/v1/common/page",
     "combinations": [
       {
         "id": "1",
@@ -10,6 +10,7 @@
           "queryId": "1",
           "pageSize": 50,
           "searchType": "BY_FARE",
+          "sortModel": [],
           "pageNo": 0
         },
         "response": {
@@ -1561,7 +1562,7 @@
               "first": true,
               "empty": false
             },
-            "totalFaresCount": 51
+            "totalFaresCount": 3
           },
           "message": {
             "level": "INFO"

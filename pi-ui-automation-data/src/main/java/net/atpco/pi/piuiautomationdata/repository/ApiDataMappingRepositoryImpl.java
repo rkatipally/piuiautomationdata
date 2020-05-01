@@ -41,4 +41,9 @@ public class ApiDataMappingRepositoryImpl implements ApiDataMappingRepository {
                 .addCriteria(Criteria.where("request").is(request));
         return template.findOne(query, ApiDataMapping.class, collectionName);
     }
+    @Override
+    public ApiDataMapping findByUrl(String url, String collectionName) {
+        Query query = new Query().addCriteria(Criteria.where("url").is(url));
+        return template.findOne(query, ApiDataMapping.class, collectionName);
+    }
 }

@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static net.atpco.pi.piuiautomationdata.constants.AutomationConstants.HTTP_GET;
+import static net.atpco.pi.piuiautomationdata.constants.AutomationConstants.HTTP_POST;
 import static net.atpco.pi.piuiautomationdata.constants.AutomationConstants.fieldsToRemove;
 
 import net.atpco.pi.piuiautomationdata.model.ApiDataMapping;
@@ -50,10 +52,22 @@ public class AutomationService {
     }
 
     public String getResponseForApi(HttpServletRequest request, HandlerMethod handler) throws IOException {
-        JSONObject requestJson = objectMapper.readValue(request.getReader(), JSONObject.class);
-        AutomationUtil.removeFields(requestJson, fieldsToRemove);
         String url = request.getRequestURI();
-        ApiDataMapping apiDataMapping = apiDataMappingRepository.findByUrlAndRequest(url, requestJson, automationSettings.getApiDataMappingCollection());
+        ApiDataMapping apiDataMapping = new ApiDataMapping();
+
+        switch (request.getMethod()) {
+            case HTTP_GET:
+                log.info("Mocking for URL - {}", url);
+                apiDataMapping = apiDataMappingRepository.findByUrl(url, automationSettings.getApiDataMappingCollection());
+                break;
+            case HTTP_POST:
+                JSONObject requestJson = objectMapper.readValue(request.getReader(), JSONObject.class);
+                AutomationUtil.removeFields(requestJson, fieldsToRemove);
+                log.info("Mocking for URL - {}, with request - {}", url, requestJson.toJSONString());
+                apiDataMapping = apiDataMappingRepository.findByUrlAndRequest(url, requestJson, automationSettings.getApiDataMappingCollection());
+
+        }
+        if(apiDataMapping == null) return "";
         return objectMapper.writeValueAsString(apiDataMapping.getResponse());
     }
 
