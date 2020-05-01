@@ -7,7 +7,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.json.simple.JSONObject;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.web.method.HandlerMethod;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -51,7 +50,7 @@ public class AutomationService {
         }
     }
 
-    public String getResponseForApi(HttpServletRequest request, HandlerMethod handler) throws IOException {
+    public String getResponseForApi(HttpServletRequest request) throws IOException {
         String url = request.getRequestURI();
         ApiDataMapping apiDataMapping = new ApiDataMapping();
 
