@@ -1,0 +1,9 @@
+{
+  "testId": "TEST_SEARCH_1",
+  "queryId": "1",
+  "responseMapping": {
+    "search": "1",
+    "status": "1",
+    "page": "1"
+  }
+}
