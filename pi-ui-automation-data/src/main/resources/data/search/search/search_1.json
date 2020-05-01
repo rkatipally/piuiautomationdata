@@ -1,7 +1,7 @@
 [
   {
     "name": "search",
-    "baseUrl": "/automation/search",
+    "baseUrl": "/atpapps/pistrategyskipper/api/v1/crud/search",
     "combinations": [
       {
         "id": "1",
@@ -40,19 +40,19 @@
         },
         "response": {
           "data": {
-            "_id": null,
-            "searchType": null,
-            "status": null,
+            "_id": "1",
+            "searchType": "BY_FARE",
+            "status": "PROCESSING",
             "domesticSubsTime": null,
             "internationalSubsTime": null,
             "totalFareCount": 0,
-            "totalRequestCount": 0,
+            "totalRequestCount": 50000,
             "completedRequestCount": 0,
             "errorCount": 0,
-            "hostCarrier": null,
+            "hostCarrier": "AA",
             "maxMarketLimitReached": false
           },
-          "message": "new message"
+          "message": {}
         }
       },
       {

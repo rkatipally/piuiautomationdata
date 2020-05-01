@@ -2,7 +2,6 @@ package net.atpco.pi.piuiautomationdata.repository;
 
 import lombok.AllArgsConstructor;
 import org.json.simple.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -17,7 +16,6 @@ import net.atpco.pi.piuiautomationdata.model.ApiDataMapping;
 @AllArgsConstructor
 public class ApiDataMappingRepositoryImpl implements ApiDataMappingRepository {
 
-    @Autowired
     final private MongoTemplate template;
 
     @Override
