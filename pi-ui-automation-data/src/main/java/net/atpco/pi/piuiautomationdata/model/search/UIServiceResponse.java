@@ -1,4 +1,4 @@
-package net.atpco.pi.piuiautomationdata.model;
+package net.atpco.pi.piuiautomationdata.model.search;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

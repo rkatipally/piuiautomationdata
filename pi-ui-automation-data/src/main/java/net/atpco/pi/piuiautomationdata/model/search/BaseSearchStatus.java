@@ -1,4 +1,4 @@
-package net.atpco.pi.piuiautomationdata.model;
+package net.atpco.pi.piuiautomationdata.model.search;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

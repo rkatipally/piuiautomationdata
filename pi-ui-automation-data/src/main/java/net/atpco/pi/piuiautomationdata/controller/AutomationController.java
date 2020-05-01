@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
-import net.atpco.pi.piuiautomationdata.model.FareSearchStatus;
-import net.atpco.pi.piuiautomationdata.model.UIFareSearchRequest;
-import net.atpco.pi.piuiautomationdata.model.UIServiceResponse;
+import net.atpco.pi.piuiautomationdata.model.search.FareSearchStatus;
+import net.atpco.pi.piuiautomationdata.model.search.UIFareSearchRequest;
+import net.atpco.pi.piuiautomationdata.model.search.UIServiceResponse;
 import net.atpco.pi.piuiautomationdata.service.AutomationService;
 
 @RestController

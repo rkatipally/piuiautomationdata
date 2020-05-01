@@ -3,6 +3,7 @@ package net.atpco.pi.piuiautomationdata.util;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.json.simple.JSONObject;
 import org.springframework.core.io.Resource;
 
 import java.io.IOException;
@@ -38,6 +39,11 @@ public class AutomationUtil {
                 .flatMap(List::stream)
                 .collect(Collectors.toList());
         return data;
+    }
+
+    public static JSONObject removeFields(JSONObject jsonObject, List<String> fields){
+        fields.forEach(jsonObject::remove);
+        return jsonObject;
     }
 
 }
