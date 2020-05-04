@@ -82,7 +82,6 @@ public class AutomationService {
 
     public void loadApiDataMapping() throws IOException {
         List<ApiDataMappingRaw> rawApiDataMappingList = AutomationUtil.readResource(automationSettings.getApiDataMappingPath(), ApiDataMappingRaw.class);
-        log.info("ApiDataMapping size is - {}", rawApiDataMappingList.size());
         List<ApiDataMapping> apiDataMappingList = new ArrayList<>();
         for (ApiDataMappingRaw rawApiDataMapping : rawApiDataMappingList) {
             for (DataCombination dataCombination : rawApiDataMapping.getCombinations()) {
@@ -94,6 +93,7 @@ public class AutomationService {
                 apiDataMappingList.add(apiDataMapping);
             }
         }
+        log.info("ApiDataMapping size is - {}", apiDataMappingList.size());
         apiDataMappingRepository.insert(apiDataMappingList, automationSettings.getApiDataMappingCollection());
     }
 

@@ -25,7 +25,7 @@ public class AutomationUtil {
         List<T> data = Files.walk(configFilePath)
                 .filter(s -> s.toString().endsWith(JSON_EXTENSION))
                 .map(Path::toFile)
-                .peek(System.out::println)
+                .peek(s -> log.info(s.getAbsolutePath()))
                 .map(file -> {
                     try {
                         JavaType type = objectMapper.getTypeFactory().constructParametricType(List.class, resourceType);
