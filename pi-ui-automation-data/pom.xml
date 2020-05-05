@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>net.atpco.pi</groupId>
 	<artifactId>pi-ui-automation-data</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>pi-ui-automation-data</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -69,6 +69,13 @@
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.mylyn.github/github-api -->
+		<dependency>
+			<groupId>org.eclipse.mylyn.github</groupId>
+			<artifactId>org.eclipse.egit.github.core</artifactId>
+			<version>2.1.5</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

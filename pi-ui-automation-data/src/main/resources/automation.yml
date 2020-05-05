@@ -4,3 +4,11 @@ automation:
   apiDataMappingPath: classpath:data
   testDataMappingCollection: testDataMapping
   apiDataMappingCollection: apiDataMapping
+
+github:
+  owner: rkatipally
+  repo: piuiautomationdata
+  apiDataMappingPath: pi-ui-automation-data/src/main/resources/data
+  testDataMappingPath: pi-ui-automation-data/src/main/resources/mappings
+  token: 3fde6e7a93fecb213b3d20d9635ada9425a671e5
+

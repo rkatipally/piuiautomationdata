@@ -8,9 +8,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import net.atpco.pi.piuiautomationdata.interceptor.AutomationInterceptor;
 import net.atpco.pi.piuiautomationdata.settings.AutomationSettings;
+import net.atpco.pi.piuiautomationdata.settings.GitHubSettings;
 
 @Configuration
-@EnableConfigurationProperties(AutomationSettings.class)
+@EnableConfigurationProperties({AutomationSettings.class, GitHubSettings.class})
 public class AutomationConfig implements WebMvcConfigurer {
 
     @Bean

@@ -21,9 +21,11 @@ public class AutomationInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(final HttpServletRequest request, final HttpServletResponse response, final Object handler) throws Exception {
+        // Intercept only for test users
         if (automationService.isTestUser(request.getHeader(X_USER_ID))) {
             log.info("preHandle - {} - {} - {}", request, request.getMethod(), request.getRequestURI());
             String responseBody = automationService.getResponseForApi(request);
+            // Set error code when no match found
             if(EMPTY_JSON.equals(responseBody)) response.setStatus(HttpServletResponse.SC_EXPECTATION_FAILED);
             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
             response.getWriter().write(responseBody);
