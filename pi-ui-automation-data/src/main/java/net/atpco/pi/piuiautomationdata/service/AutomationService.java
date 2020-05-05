@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static net.atpco.pi.piuiautomationdata.constants.AutomationConstants.EMPTY_JSON;
 import static net.atpco.pi.piuiautomationdata.constants.AutomationConstants.HTTP_GET;
 import static net.atpco.pi.piuiautomationdata.constants.AutomationConstants.HTTP_POST;
 import static net.atpco.pi.piuiautomationdata.constants.AutomationConstants.fieldsToRemove;
@@ -66,7 +67,7 @@ public class AutomationService {
                 apiDataMapping = apiDataMappingRepository.findByUrlAndRequest(url, requestJson, automationSettings.getApiDataMappingCollection());
 
         }
-        if(apiDataMapping == null) return "";
+        if(apiDataMapping == null) return EMPTY_JSON;
         return objectMapper.writeValueAsString(apiDataMapping.getResponse());
     }
 

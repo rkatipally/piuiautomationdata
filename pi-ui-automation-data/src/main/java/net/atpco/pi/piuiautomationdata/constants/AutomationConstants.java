@@ -10,4 +10,5 @@ public class AutomationConstants {
     public final static List<String> fieldsToRemove = Arrays.asList("effectiveDate", "firstTravelDate");
     public final static String HTTP_GET = "GET";
     public final static String HTTP_POST = "POST";
+    public final static String EMPTY_JSON = "{}";
 }
